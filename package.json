@@ -10,6 +10,7 @@
     "dev": "vite --host",
     "start": "npx serve ./dist",
     "prebuild": "rimraf dist",
+    "build:dev": "vite build --mode development",
     "build": "vite build && cp -r ./staticwebapp.config.json ./dist",
     "dist": "tsc --watch",
     "test": "vitest --run",
