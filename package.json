@@ -40,6 +40,7 @@
     "axios": "^1.6.7",
     "caniuse-lite": "^1.0.30001721",
     "cross-env": "^7.0.3",
+    "lovable-tagger": "^1.1.13",
     "moment": "^2.30.1",
     "nprogress": "^0.2.0",
     "process": "^0.11.10",
