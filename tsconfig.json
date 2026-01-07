@@ -95,12 +95,7 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "allowImportingTsExtensions": true
   },
-  "include": ["src", "src/test"],
+  "include": ["src", "src/test", "vite.config.ts"],
   "exclude": ["node_modules", "dist"],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
   "extends": "./tsconfig.paths.json"
 }
