@@ -50,7 +50,7 @@ export default defineConfig(({ mode }) => ({
   cacheDir: 'node_modules/.vite',
   server: {
     host: true,
-    port: 3000,
+    port: 8080,
     watch: {
       usePolling: true,
     },
