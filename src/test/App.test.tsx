@@ -2,7 +2,7 @@ import { render, waitFor } from '@testing-library/react'
 import { act } from 'react-dom/test-utils'
 import { vi } from 'vitest'
 
-import { App } from '../app'
+import { App } from '../App'
 
 describe('Initial state of component', () => {
   it('renders the App component', async () => {
