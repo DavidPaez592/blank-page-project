@@ -1,0 +1,134 @@
+/* Exchange Rates Form Drawer Styles */
+.exchange-rates-form-drawer {
+  .drawer-header {
+    .ant-typography {
+      margin-bottom: 4px;
+    }
+  }
+
+  .drawer-content {
+    padding: 0;
+    position: relative;
+
+    .exchange-rate-form {
+      .form-section {
+        margin-bottom: 32px;
+
+        .section-title {
+          margin-bottom: 16px;
+          color: #1f2937;
+          font-weight: 600;
+          border-bottom: 1px solid #e5e7eb;
+          padding-bottom: 8px;
+        }
+
+        .ant-form-item {
+          margin-bottom: 20px;
+
+          .ant-form-item-label {
+            label {
+              font-weight: 500;
+              color: #374151;
+            }
+          }
+
+          .ant-input,
+          .ant-select-selector,
+          .ant-input-number,
+          .ant-picker {
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            transition: all 0.2s;
+
+            &:hover {
+              border-color: #1890ff;
+            }
+
+            &:focus,
+            &.ant-input-focused,
+            &.ant-select-focused .ant-select-selector,
+            &.ant-input-number-focused,
+            &.ant-picker-focused {
+              border-color: #1890ff;
+              box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+            }
+          }
+
+          .ant-input-number {
+            width: 100%;
+          }
+
+          .ant-switch {
+            &.ant-switch-checked {
+              background-color: #52c41a;
+            }
+          }
+        }
+
+        .ant-form-item-has-error {
+          .ant-input,
+          .ant-select-selector,
+          .ant-input-number,
+          .ant-picker {
+            border-color: #ff4d4f;
+
+            &:hover,
+            &:focus,
+            &.ant-input-focused,
+            &.ant-select-focused .ant-select-selector,
+            &.ant-input-number-focused,
+            &.ant-picker-focused {
+              border-color: #ff4d4f;
+              box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+            }
+          }
+        }
+      }
+    }
+
+    .drawer-actions {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 1000;
+
+      .submit-button {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .exchange-rates-form-drawer {
+    .drawer-content {
+      .exchange-rate-form {
+        .form-section {
+          .section-title {
+            color: #f9fafb;
+            border-bottom-color: #374151;
+          }
+
+          .ant-form-item-label label {
+            color: #e5e7eb;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .exchange-rates-form-drawer {
+    .ant-drawer-content-wrapper {
+      width: 100% !important;
+    }
+  }
+}

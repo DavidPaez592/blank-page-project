@@ -1,0 +1,167 @@
+/* Payment Methods Page Styles */
+.payment-methods-container {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: 100vh;
+
+  .payment-methods-header {
+    margin-bottom: 24px;
+
+    .header-card {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      .ant-card-body {
+        padding: 24px;
+      }
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .title-section {
+        .page-title {
+          margin-bottom: 4px !important;
+          color: #1f2937;
+        }
+
+        .page-description {
+          font-size: 14px;
+          color: #6b7280;
+        }
+      }
+
+      .actions-section {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .statistics-section {
+      .stat-card {
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          transform: translateY(-2px);
+        }
+
+        .ant-statistic {
+          text-align: center;
+
+          .ant-statistic-title {
+            color: #6b7280;
+            font-weight: 500;
+          }
+
+          .ant-statistic-content {
+            .ant-statistic-content-value {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .payment-methods-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    .payment-methods-table-card {
+      border: none;
+      border-radius: 0;
+
+      .ant-card-head {
+        border-bottom: 1px solid #f0f0f0;
+        background: #fafafa;
+
+        .ant-card-head-title {
+          font-weight: 600;
+          color: #1f2937;
+        }
+      }
+
+      .ant-card-body {
+        padding: 0;
+      }
+    }
+  }
+
+  // Responsive design
+  @media (max-width: 768px) {
+    padding: 16px;
+
+    .payment-methods-header {
+      .header-content {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+
+        .actions-section {
+          justify-content: flex-end;
+        }
+      }
+
+      .statistics-section {
+        .statistics-row {
+          .ant-col {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .payment-methods-header {
+      .header-content {
+        .actions-section {
+          .ant-space {
+            width: 100%;
+            justify-content: space-between;
+
+            .ant-btn {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Loading states */
+.payment-methods-container {
+  .ant-spin-nested-loading {
+    .ant-spin-container {
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    .ant-spin-blur {
+      opacity: 0.5;
+    }
+  }
+}
+
+/* Card hover effects */
+.payment-methods-container .stat-card {
+  cursor: default;
+
+  &:hover {
+    .ant-statistic-content {
+      .ant-statistic-content-value {
+        transform: scale(1.05);
+        transition: transform 0.2s ease;
+      }
+    }
+  }
+}

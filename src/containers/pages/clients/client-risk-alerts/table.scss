@@ -1,0 +1,151 @@
+.client-risk-alerts-table {
+  .ant-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .table-header {
+    margin-bottom: 16px;
+    
+    .ant-typography {
+      color: #1890ff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  .table-filters {
+    margin: 16px 0;
+    padding: 16px;
+    background-color: #fafafa;
+    border-radius: 6px;
+    
+    .ant-input,
+    .ant-select-selector {
+      border-radius: 4px;
+    }
+  }
+
+  .table-actions {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .ant-table {
+    .ant-table-thead > tr > th {
+      background-color: #f8f9fa;
+      font-weight: 600;
+      color: #262626;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .ant-table-tbody > tr {
+      transition: all 0.3s;
+      
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+
+    .ant-table-cell {
+      padding: 12px 16px;
+    }
+  }
+
+  // Status specific styles
+  .ant-tag {
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    
+    &.ant-tag-error {
+      background-color: #fff2f0;
+      border-color: #ffccc7;
+      color: #cf1322;
+    }
+    
+    &.ant-tag-warning {
+      background-color: #fffbe6;
+      border-color: #ffe58f;
+      color: #d48806;
+    }
+    
+    &.ant-tag-blue {
+      background-color: #e6f7ff;
+      border-color: #91d5ff;
+      color: #096dd9;
+    }
+    
+    &.ant-tag-success {
+      background-color: #f6ffed;
+      border-color: #b7eb8f;
+      color: #389e0d;
+    }
+  }
+
+  // Action buttons
+  .ant-btn-text {
+    transition: all 0.3s;
+    
+    &:hover {
+      transform: translateY(-1px);
+    }
+    
+    &.ant-btn-dangerous:hover {
+      background-color: #fff2f0;
+      border-color: #ffccc7;
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    .table-filters {
+      .ant-row {
+        .ant-col {
+          margin-bottom: 8px;
+        }
+      }
+    }
+    
+    .table-actions {
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    
+    .ant-table {
+      font-size: 12px;
+      
+      .ant-table-cell {
+        padding: 8px 12px;
+      }
+    }
+  }
+
+  // Empty state
+  .ant-empty {
+    padding: 60px 20px;
+    
+    .ant-empty-description {
+      color: #999;
+      font-size: 14px;
+    }
+  }
+
+  // Loading state
+  .ant-spin-container {
+    min-height: 300px;
+  }
+
+  // Pagination
+  .ant-pagination {
+    margin-top: 16px;
+    text-align: right;
+    
+    .ant-pagination-total-text {
+      font-size: 13px;
+      color: #666;
+    }
+  }
+}

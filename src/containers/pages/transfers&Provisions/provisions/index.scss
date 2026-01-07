@@ -1,0 +1,23 @@
+.provisions-tabs {
+  // Texto del tab activo
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #f97316 !important;
+    font-weight: 600;
+  }
+
+  // Línea inferior (ink bar)
+  .ant-tabs-ink-bar {
+    background: #f97316 !important;
+    height: 3px;
+  }
+
+  // Hover
+  .ant-tabs-tab:hover .ant-tabs-tab-btn {
+    color: #ea580c;
+  }
+
+  // Tabs inactivos
+  .ant-tabs-tab .ant-tabs-tab-btn {
+    color: #0d0d0d;
+  }
+}

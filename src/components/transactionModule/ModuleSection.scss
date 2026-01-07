@@ -1,0 +1,95 @@
+@use '../../styles/vars.scss' as *;
+
+.module-section {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 16px;
+
+  &--highlight {
+    background: var(--module-light);
+    border-color: var(--module-primary);
+  }
+
+  &__header {
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    gap: 12px;
+    padding: 12px 16px;
+
+    &-icon {
+      color: var(--module-primary);
+      font-size: 18px;
+    }
+
+    &-title {
+      color: #374151;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    &-checkbox {
+      margin-left: auto;
+    }
+  }
+
+  &--highlight &__header {
+    border-bottom-color: var(--module-primary);
+  }
+
+  &__content {
+    padding: 16px;
+  }
+
+  &__field {
+    margin-bottom: 16px;
+
+    label {
+      color: #374151;
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .ant-input,
+    .ant-select,
+    .ant-picker,
+    .ant-input-number {
+      width: 100%;
+    }
+
+    &--readonly {
+      .ant-input {
+        background: #f3f4f6;
+        cursor: default;
+      }
+    }
+  }
+}
+
+// Media queries para responsividad
+@media (max-width: 768px) {
+  .module-section {
+    &__header {
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px 12px;
+
+      &-checkbox {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+
+    &__content {
+      padding: 12px;
+    }
+
+    &__field {
+      margin-bottom: 12px;
+    }
+  }
+}

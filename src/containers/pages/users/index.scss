@@ -1,0 +1,16 @@
+@use '/src/styles/vars' as *;
+
+.users-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+
+  .ant-switch-inner {
+    width: 200px !important;
+  }
+
+  .ant-table-cell {
+    white-space: pre-wrap;
+  }
+}

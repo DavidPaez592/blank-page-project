@@ -1,0 +1,90 @@
+$primary: #f97316;
+$primary-light: #ffedd5;
+$primary-dark: #c2410c;
+$border-color: #e5e7eb;
+$text-secondary: #4b5563;
+
+.action-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  // Styles for the action bar container
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding: 10px;
+  background: white;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  margin-top: 15px;
+
+  .ant-btn {
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+    background: white;
+    color: $text-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+
+    .anticon {
+      font-size: 16px;
+    }
+
+    &:hover {
+      border-color: $primary;
+      color: $primary;
+      background: $primary-light;
+    }
+
+    &.ant-btn-primary {
+      background: $primary;
+      border-color: $primary;
+      color: white;
+
+      &:hover {
+        background: $primary-dark;
+        border-color: $primary-dark;
+      }
+    }
+
+    &.ant-btn-dangerous {
+      border-color: #fecaca;
+      color: #ef4444;
+
+      &:hover {
+        background: #fef2f2;
+        border-color: #ef4444;
+      }
+    }
+  }
+
+  .ant-btn-primary-blue {
+    background: #1677ff !important;
+    border-color: #1677ff !important;
+
+    &:hover {
+      background: #0958d9 !important;
+      border-color: #0958d9 !important;
+    }
+  }
+
+  .ant-btn-primary-orange {
+    background: #f97316 !important;
+    border-color: #f97316 !important;
+
+    &:hover {
+      background: #ea580c !important;
+      border-color: #ea580c !important;
+    }
+  }
+}

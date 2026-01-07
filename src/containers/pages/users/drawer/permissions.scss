@@ -1,0 +1,66 @@
+@use '/src/styles/vars' as *;
+
+.drawer-user-permissions {
+  display: grid;
+
+  .ant-drawer-header {
+    padding: $pad;
+    gap: $gap;
+
+    @media screen and (max-width: 768px) {
+      display: grid;
+    }
+  }
+
+  .ant-drawer-extra {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: auto min-content;
+    align-items: center;
+
+    @media screen and (min-width: 769px) {
+      .permissions-role-selector {
+        width: 400px;
+      }
+    }
+  }
+
+  .ant-drawer-body {
+    display: grid;
+    padding: $pad;
+
+    .ant-transfer {
+      display: grid;
+      gap: $gap;
+
+      @media screen and (min-width: 769px) {
+        grid-template-columns: 1fr min-content 1fr;
+      }
+
+      .ant-transfer-list {
+        width: 100%;
+      }
+
+      .ant-transfer-operation {
+        display: grid;
+        gap: $gap;
+        margin: 0;
+        justify-items: center;
+
+        @media screen and (max-width: 768px) {
+          grid-template-columns: repeat(2, 1fr);
+
+          button {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  .permissions-save-button {
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+}

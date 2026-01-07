@@ -1,0 +1,49 @@
+@use '/src/styles/vars' as *;
+
+.role-permissions-drawer {
+  display: grid;
+
+  .ant-drawer-header {
+    padding: $pad;
+    gap: $gap;
+  }
+
+  .ant-drawer-body {
+    display: grid;
+    padding: $pad;
+
+    .ant-transfer {
+      display: grid;
+      gap: $gap;
+
+      @media screen and (min-width: 769px) {
+        grid-template-columns: 1fr min-content 1fr;
+      }
+
+      .ant-transfer-list {
+        width: 100%;
+      }
+
+      .ant-transfer-operation {
+        display: grid;
+        gap: $gap;
+        margin: 0;
+        justify-items: center;
+
+        @media screen and (max-width: 768px) {
+          grid-template-columns: repeat(2, 1fr);
+
+          button {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  .permissions-save-button {
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+}

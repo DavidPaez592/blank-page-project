@@ -1,0 +1,156 @@
+.currencies-container {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: 100vh;
+
+  .currencies-header {
+    margin-bottom: 24px;
+
+    .header-card {
+      margin-bottom: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      .ant-card-body {
+        padding: 24px;
+      }
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .title-section {
+        .page-title {
+          margin-bottom: 4px !important;
+          color: #1f2937;
+        }
+
+        .page-description {
+          font-size: 14px;
+          color: #6b7280;
+        }
+      }
+
+      .actions-section {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .statistics-section {
+      .stat-card {
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          transform: translateY(-2px);
+        }
+
+        &.active {
+          border-color: #10b981;
+          background: linear-gradient(135deg, #ecfdf5, #ffffff);
+
+          .stat-number {
+            color: #10b981 !important;
+          }
+        }
+
+        &.inactive {
+          border-color: #ef4444;
+          background: linear-gradient(135deg, #fef2f2, #ffffff);
+
+          .stat-number {
+            color: #ef4444 !important;
+          }
+        }
+
+        .stat-content {
+          text-align: center;
+          padding: 8px 16px;
+
+          .stat-number {
+            margin-bottom: 0 !important;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .statistics-row {
+      .ant-card {
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        .ant-statistic-title {
+          color: #6b7280;
+          font-weight: 500;
+        }
+
+        .ant-statistic-content {
+          .ant-statistic-content-value {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .currencies-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  // Responsive design
+  @media (max-width: 768px) {
+    padding: 16px;
+
+    .currencies-header {
+      .header-content {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+
+        .actions-section {
+          justify-content: flex-end;
+        }
+      }
+
+      .statistics-section {
+        .ant-space {
+          width: 100%;
+          justify-content: space-between;
+
+          .stat-card {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .currencies-header {
+      .statistics-section {
+        .ant-space {
+          flex-direction: column;
+          width: 100%;
+
+          .stat-card {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

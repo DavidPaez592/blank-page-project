@@ -1,0 +1,10 @@
+vite.config.mts
+vitest.config.ts
+jest.config.cjs
+commitlint.config.cjs
+.husky
+.scannerwork
+coverage
+node_modules
+dist
+dist

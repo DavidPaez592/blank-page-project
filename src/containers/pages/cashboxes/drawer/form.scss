@@ -1,0 +1,249 @@
+// Clients Form Drawer Styles - Mobile First Design
+.clients-form-drawer {
+  .ant-drawer-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 16px 20px;
+
+    .ant-drawer-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #1890ff;
+
+      @media (min-width: 768px) {
+        font-size: 18px;
+      }
+
+      svg {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .drawer-content {
+    padding-bottom: 80px;
+
+    .client-form {
+      .form-section {
+        margin-bottom: 20px;
+        padding: 16px;
+        background: #fafafa;
+        border-radius: 8px;
+        border: 1px solid #f0f0f0;
+
+        @media (min-width: 768px) {
+          padding: 20px;
+        }
+
+        .section-title {
+          margin-bottom: 4px !important;
+          color: #262626;
+          font-size: 15px;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          @media (min-width: 768px) {
+            font-size: 16px;
+          }
+        }
+
+        .section-description {
+          display: block;
+          margin-bottom: 12px;
+          color: #8c8c8c;
+          font-size: 12px;
+
+          @media (min-width: 768px) {
+            font-size: 13px;
+          }
+        }
+
+        .ant-form-item {
+          margin-bottom: 12px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .ant-form-item-label {
+          padding-bottom: 4px;
+        }
+
+        .ant-form-item-label > label {
+          font-weight: 500;
+          font-size: 13px;
+          color: #595959;
+          height: auto;
+
+          @media (min-width: 768px) {
+            font-size: 14px;
+          }
+        }
+
+        .ant-input,
+        .ant-input-number,
+        .ant-select-selector,
+        .ant-picker {
+          border-radius: 6px;
+          font-size: 14px;
+
+          @media (min-width: 768px) {
+            font-size: 14px;
+          }
+        }
+
+        .ant-input-number {
+          width: 100%;
+        }
+
+        textarea.ant-input {
+          resize: none;
+
+          &:focus {
+            border-color: #1890ff;
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+          }
+        }
+      }
+
+      .form-divider {
+        margin: 16px 0;
+        border-top: 1px dashed #e8e8e8;
+
+        @media (min-width: 768px) {
+          margin: 20px 0;
+        }
+      }
+    }
+
+    .drawer-actions {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 1000;
+
+      .submit-button {
+        width: 56px;
+        height: 56px;
+        box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 6px 16px rgba(24, 144, 255, 0.5);
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments for full-width drawer on mobile
+@media (max-width: 767px) {
+  .clients-form-drawer {
+    .ant-drawer-content-wrapper {
+      width: 100% !important;
+    }
+
+    .ant-drawer-header {
+      padding: 14px 16px;
+
+      .ant-drawer-title {
+        font-size: 16px;
+      }
+    }
+
+    .ant-drawer-body {
+      padding: 12px;
+    }
+
+    .drawer-content {
+      .client-form {
+        .form-section {
+          padding: 12px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+// Tablet and Desktop
+@media (min-width: 768px) {
+  .clients-form-drawer {
+    .ant-drawer-content-wrapper {
+      width: 600px !important;
+      max-width: 90vw;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .clients-form-drawer {
+    .ant-drawer-content-wrapper {
+      width: 700px !important;
+    }
+  }
+}
+
+// Input focus effects
+.clients-form-drawer {
+  .ant-input:focus,
+  .ant-input-focused,
+  .ant-select-focused .ant-select-selector,
+  .ant-picker-focused {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+  }
+
+  // Date picker full width
+  .ant-picker {
+    width: 100%;
+  }
+
+  // Select dropdown styling
+  .ant-select-item-option-selected {
+    background-color: #e6f7ff;
+    font-weight: 500;
+  }
+}
+
+// Loading state
+.clients-form-drawer {
+  .ant-form-item-has-feedback {
+    .ant-input,
+    .ant-select-selector {
+      padding-right: 40px;
+    }
+  }
+}
+
+// Error states
+.clients-form-drawer {
+  .ant-form-item-has-error {
+    .ant-input,
+    .ant-select-selector,
+    .ant-picker {
+      border-color: #ff4d4f;
+
+      &:focus,
+      &:hover {
+        border-color: #ff4d4f;
+        box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.1);
+      }
+    }
+
+    .ant-form-item-explain-error {
+      font-size: 13px;
+      margin-top: 6px;
+    }
+  }
+}

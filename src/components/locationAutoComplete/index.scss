@@ -1,0 +1,64 @@
+.location-autocomplete {
+  width: 100%;
+
+  .ant-select-selector {
+    border-radius: 8px !important;
+  }
+}
+
+.location-option {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 0;
+
+  .location-option-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #1f2937;
+
+    .location-icon {
+      color: #1890ff;
+      font-size: 14px;
+    }
+
+    .location-address {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .location-option-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 22px;
+    font-size: 12px;
+    color: #6b7280;
+
+    .location-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .location-code {
+      color: #9ca3af;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.ant-select-dropdown {
+  .location-option {
+    &:hover {
+      .location-option-main {
+        color: #1890ff;
+      }
+    }
+  }
+}

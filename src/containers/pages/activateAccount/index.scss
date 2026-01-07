@@ -1,0 +1,85 @@
+.activate-account-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: #001529;
+  height: 100vh;
+  color: white;
+  padding: 20px;
+
+  .isoLogoWrapper {
+    animation: fadeInOut 3s infinite;
+    animation: slide-down ease-in-out 1s;
+    img {
+      max-height: 100px !important;
+    }
+  }
+
+  .token-validation {
+    display: flex;
+    text-align: center;
+    white-space: pre-wrap;
+    font-size: 2rem;
+    margin: 40px 0px;
+    max-width: 600px;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}

@@ -1,0 +1,50 @@
+.module-actions {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 16px;
+
+  .ant-btn {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    height: 40px;
+    min-width: 120px;
+    padding: 0 20px;
+
+    .anticon {
+      font-size: 16px;
+    }
+  }
+}
+
+// Media queries para responsividad
+@media (max-width: 768px) {
+  .module-actions {
+    flex-direction: column;
+    padding: 12px;
+
+    .ant-btn {
+      justify-content: center;
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .module-actions {
+    gap: 8px;
+
+    .ant-btn {
+      font-size: 14px;
+      height: 36px;
+      padding: 0 12px;
+    }
+  }
+}

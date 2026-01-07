@@ -1,0 +1,32 @@
+.user-tenants-drawer {
+  .ant-drawer-body {
+    padding: 0;
+  }
+
+  .tenant-section {
+    margin-bottom: 2rem;
+  }
+
+  .tenant-add-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .tenant-list-section {
+    .ant-table-thead > tr > th {
+      background: #fafafa;
+      font-weight: 600;
+    }
+
+    .ant-table-tbody > tr:hover > td {
+      background: #f5f5f5;
+    }
+  }
+
+  .tenant-counter {
+    color: #666;
+    font-weight: normal;
+  }
+}

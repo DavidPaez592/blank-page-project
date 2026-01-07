@@ -1,0 +1,255 @@
+// Clients Page Styles - Mobile First Design
+.clients-container {
+  padding: 16px;
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+
+  @media (min-width: 768px) {
+    padding: 24px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 32px;
+  }
+
+  .clients-header {
+    margin-bottom: 24px;
+    animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+
+    .header-content {
+      .header-title-wrapper {
+        width: 100%;
+
+        .header-icon {
+          font-size: 32px;
+          color: #1890ff;
+          padding: 12px;
+          background: linear-gradient(135deg, #e6f7ff 0%, #bae7ff 100%);
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(24, 144, 255, 0.15);
+
+          @media (min-width: 768px) {
+            font-size: 40px;
+            padding: 16px;
+          }
+        }
+
+        .page-title {
+          margin: 0;
+          font-size: 22px;
+          font-weight: 700;
+          color: #262626;
+          line-height: 1.3;
+
+          @media (min-width: 768px) {
+            font-size: 28px;
+          }
+
+          @media (min-width: 1024px) {
+            font-size: 32px;
+          }
+        }
+
+        .page-subtitle {
+          margin: 4px 0 0;
+          font-size: 13px;
+          color: #8c8c8c;
+          line-height: 1.4;
+
+          @media (min-width: 768px) {
+            font-size: 14px;
+          }
+
+          @media (min-width: 1024px) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .clients-content {
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  // Floating Action Button Customization
+  .create-client-fab {
+    box-shadow: 0 4px 16px rgba(24, 144, 255, 0.4) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    &:hover {
+      transform: scale(1.1) !important;
+      box-shadow: 0 6px 20px rgba(24, 144, 255, 0.5) !important;
+    }
+
+    &:active {
+      transform: scale(0.95) !important;
+    }
+
+    .ant-float-btn-body {
+      background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%) !important;
+      transition: all 0.3s ease !important;
+
+      &:hover {
+        background: linear-gradient(
+          135deg,
+          #40a9ff 0%,
+          #1890ff 100%
+        ) !important;
+      }
+
+      .anticon {
+        font-size: 24px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Empty state styling (if needed)
+.clients-container {
+  .ant-empty {
+    padding: 40px 20px;
+
+    @media (min-width: 768px) {
+      padding: 60px 20px;
+    }
+
+    .ant-empty-image {
+      height: 100px;
+      margin-bottom: 16px;
+
+      @media (min-width: 768px) {
+        height: 120px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .ant-empty-description {
+      font-size: 14px;
+      color: #8c8c8c;
+
+      @media (min-width: 768px) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// Mobile optimization
+@media (max-width: 767px) {
+  .clients-container {
+    padding: 12px;
+
+    .clients-header {
+      margin-bottom: 20px;
+
+      .header-content {
+        .header-title-wrapper {
+          .header-icon {
+            font-size: 28px;
+            padding: 10px;
+          }
+
+          .page-title {
+            font-size: 20px;
+          }
+
+          .page-subtitle {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .create-client-fab {
+      right: 16px !important;
+      bottom: 16px !important;
+      width: 56px !important;
+      height: 56px !important;
+    }
+  }
+}
+
+// Tablet optimization
+@media (min-width: 768px) and (max-width: 1023px) {
+  .clients-container {
+    padding: 20px;
+  }
+}
+
+// Print styles
+@media print {
+  .clients-container {
+    .create-client-fab {
+      display: none !important;
+    }
+
+    .clients-header {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// Accessibility improvements
+.clients-container {
+  .create-client-fab {
+    &:focus-visible {
+      outline: 2px solid #1890ff;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// Loading states
+.clients-container {
+  &.loading {
+    .clients-content {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+  }
+}
+
+// Responsive grid adjustments
+@media (min-width: 1200px) {
+  .clients-container {
+    .clients-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .clients-container {
+    .clients-content {
+      max-width: 1600px;
+    }
+  }
+}

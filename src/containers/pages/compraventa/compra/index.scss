@@ -1,0 +1,867 @@
+@use '/src/styles/vars' as *;
+
+// Variables
+$primary: #3b82f6;
+$primary-light: #dbeafe;
+$primary-dark: #1d4ed8;
+
+$compra-primary: #3b82f6;
+$compra-light: #dbeafe;
+$compra-dark: #1d4ed8;
+$compra-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+
+$border-color: #e5e7eb;
+$bg-light: #f9fafb;
+$text-primary: #1f2937;
+$text-secondary: #4b5563;
+$text-muted: #9ca3af;
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+// ==================== MÓDULO COMPRA ====================
+.compra-module {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 16px;
+    background: white;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+  }
+
+  &__header-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__header-icon {
+    font-size: 18px;
+    color: $compra-primary;
+  }
+
+  &__title {
+    margin: 0 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: $text-primary !important;
+    letter-spacing: 0.5px;
+  }
+
+  &__header-fields {
+    display: flex;
+    gap: 16px;
+    flex: 1;
+    align-items: flex-end;
+  }
+
+  &__header-input {
+    width: 140px !important;
+    height: 36px !important;
+    
+    &.ant-picker {
+      height: 36px !important;
+      
+      .ant-picker-input {
+        height: 100% !important;
+        
+        > input {
+          font-size: 13px !important;
+          height: 100% !important;
+        }
+      }
+    }
+    
+    &.ant-input {
+      font-size: 13px !important;
+    }
+  }
+
+  &__field-group--header {
+    min-width: 140px;
+  }
+
+  &__header-dian {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: auto;
+    gap: 6px;
+  }
+
+  &__dian-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__dian-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .ant-checkbox-wrapper {
+      white-space: nowrap;
+    }
+  }
+
+  &__dian-input {
+    width: 140px !important;
+    height: 32px !important;
+  }
+
+  &__field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    label {
+      font-size: 11px;
+      font-weight: 500;
+      color: $text-muted;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1;
+      min-height: 14px;
+    }
+
+    .ant-input {
+      height: 36px !important;
+      font-size: 14px;
+      color: $text-primary;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      background: white;
+      padding: 0 12px;
+
+      &:hover {
+        border-color: #cbd5e1;
+      }
+
+      &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.1);
+      }
+
+      &::placeholder {
+        color: $text-muted;
+      }
+    }
+
+    .ant-select {
+      height: 36px !important;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    min-width: 100px;
+    height: 36px !important;
+
+    &.ant-select-sm {
+      height: 36px !important;
+    }
+
+    .ant-select-selector {
+      height: 36px !important;
+      min-height: 36px !important;
+      border-radius: 8px !important;
+      border: 1px solid $border-color !important;
+      background: white !important;
+      font-size: 14px !important;
+      padding: 0 12px !important;
+
+      .ant-select-selection-search {
+        inset-inline-start: 12px !important;
+        inset-inline-end: 30px !important;
+      }
+
+      .ant-select-selection-item,
+      .ant-select-selection-placeholder {
+        line-height: 34px !important;
+        padding-inline-end: 20px !important;
+      }
+    }
+
+    .ant-select-arrow {
+      inset-inline-end: 12px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      margin-top: 0 !important;
+      height: auto !important;
+    }
+
+    &:hover .ant-select-selector {
+      border-color: #cbd5e1 !important;
+    }
+
+    &.ant-select-focused .ant-select-selector {
+      border-color: $primary !important;
+      box-shadow: 0 0 0 3px rgba($primary, 0.1) !important;
+    }
+  }
+
+  // Inner tabs
+  &__inner-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: white;
+    border-bottom: 2px solid $border-color;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  &__inner-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 32px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-muted;
+    cursor: pointer;
+    transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    position: relative;
+    white-space: nowrap;
+
+    .anticon {
+      font-size: 14px;
+    }
+
+    &:hover:not(.active) {
+      color: $text-secondary;
+      background: rgba($compra-primary, 0.03);
+    }
+
+    &.active {
+      color: $compra-primary;
+      border-bottom-color: $compra-primary;
+
+      .anticon {
+        color: $compra-primary;
+      }
+    }
+  }
+
+  // Grid
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    animation: fadeInContent 0.4s ease-out;
+
+    .compra-module__section--highlight {
+      grid-column: 1 / -1;
+    }
+
+    .compra-module__section:nth-child(2) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  // Secciones
+  &__section {
+    background: white;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: #d1d5db;
+    }
+
+    &--highlight {
+      border-color: rgba($compra-primary, 0.3);
+
+      .compra-module__section-header {
+        background: $compra-gradient;
+
+        .compra-module__section-title,
+        .anticon {
+          color: white;
+        }
+      }
+    }
+
+    &--optional {
+      opacity: 0.6;
+
+      &.active {
+        opacity: 1;
+        border-color: $border-color;
+      }
+    }
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__section-header {
+    padding: 8px 12px;
+    background: $bg-light;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+
+    .anticon {
+      color: $text-primary;
+      font-size: 14px;
+    }
+
+    &--check {
+      .ant-checkbox-wrapper {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__section-body {
+    padding: 12px;
+
+    .ant-row {
+      row-gap: 8px !important;
+      
+      // Alinear campos en "A comprar"
+      &[wrap="false"] {
+        display: flex;
+        align-items: flex-end;
+        
+        .ant-col {
+          flex: 1;
+          min-width: 0;
+        }
+        
+        .compra-module__field-group {
+          .ant-input,
+          .compra-module__select .ant-select-selector {
+            height: 36px !important;
+          }
+        }
+      }
+    }
+  }
+
+  &__checkbox-full {
+    margin-top: 12px;
+    font-size: 14px;
+    color: $text-secondary;
+  }
+
+  // Botones de cliente
+  &__client-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  &__client-btn {
+    height: 36px !important;
+    padding: 0 20px !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: $compra-primary !important;
+    border-color: $compra-primary !important;
+
+    &:hover {
+      background: $compra-dark !important;
+      border-color: $compra-dark !important;
+    }
+  }
+
+  // Botones de acción
+  &__actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding: 10px;
+    background: white;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    flex-wrap: wrap;
+
+    .ant-btn {
+      height: 36px;
+      padding: 0 16px;
+      border-radius: 8px;
+      border: 1px solid $border-color;
+      background: white;
+      color: $text-secondary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+
+      .anticon {
+        font-size: 16px;
+      }
+
+      &:hover {
+        border-color: $primary;
+        color: $primary;
+        background: $primary-light;
+      }
+
+      &.ant-btn-primary {
+        background: $primary;
+        border-color: $primary;
+        color: white;
+
+        &:hover {
+          background: $primary-dark;
+          border-color: $primary-dark;
+        }
+      }
+
+      &.ant-btn-dangerous {
+        border-color: #fecaca;
+        color: #ef4444;
+
+        &:hover {
+          background: #fef2f2;
+          border-color: #ef4444;
+        }
+      }
+    }
+  }
+
+  // Sidebar
+  &__sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+    margin-top: 0;
+  }
+
+  &__stats {
+    background: white;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  &__stat {
+    text-align: center;
+    padding: 8px;
+    background: $bg-light;
+    border-radius: 8px;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: $text-muted;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__stat-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: $compra-primary;
+    display: block;
+  }
+
+  &__sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .ant-btn {
+      height: 44px;
+      justify-content: flex-start;
+      padding: 0 16px;
+      font-size: 13px;
+      border-radius: 10px;
+      border: 1px solid $border-color;
+      background: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .anticon {
+        font-size: 18px;
+        color: $compra-primary;
+      }
+
+      &:hover {
+        border-color: $compra-primary;
+        color: $compra-primary;
+        background: $compra-light;
+      }
+    }
+  }
+
+  // ==================== ADICIONALES ====================
+  &__adicionales {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: fadeInContent 0.4s ease-out;
+  }
+
+  &__adicionales-section {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid $border-color;
+    overflow: hidden;
+  }
+
+  &__adicionales-header {
+    padding: 8px 12px;
+    background: $bg-light;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__adicionales-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__adicionales-body {
+    padding: 12px;
+  }
+
+  &__pdf-btn {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .anticon {
+      font-size: 18px;
+    }
+  }
+
+  // ==================== LISTA ====================
+  &__lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    animation: fadeInContent 0.4s ease-out;
+  }
+
+  &__lista-table {
+    max-width: 1200px;
+    width: 100%;
+
+    .ant-table {
+      font-size: 13px;
+    }
+
+    .ant-table-thead > tr > th {
+      background: $bg-light;
+      font-weight: 600;
+      color: $text-primary;
+      border-bottom: 2px solid $border-color;
+      padding: 10px 12px;
+    }
+
+    .ant-table-tbody > tr > td {
+      padding: 8px 12px;
+      color: $text-secondary;
+    }
+
+    .ant-table-tbody > tr:hover > td {
+      background: rgba($primary, 0.05);
+    }
+  }
+
+  &__lista-total {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: white;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    box-shadow: $shadow-sm;
+  }
+
+  &__lista-total-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-muted;
+  }
+
+  &__lista-total-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary;
+  }
+}
+
+// ==================== RESPONSIVE ====================
+@media screen and (max-width: 1200px) {
+  .compra-module {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__sidebar {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 0;
+
+      .compra-module__stats {
+        flex: 1;
+        min-width: 200px;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        
+        .compra-module__stat {
+          flex: 1;
+          margin-bottom: 0;
+        }
+      }
+
+      .compra-module__sidebar-buttons {
+        flex: 1;
+        min-width: 200px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .ant-btn {
+          flex: 1;
+          min-width: 140px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .compra-module {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__header {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+    }
+
+    &__header-title {
+      justify-content: center;
+    }
+
+    &__header-fields {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    &__header-dian {
+      margin-left: 0;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    &__client-actions {
+      flex-direction: column;
+      
+      .ant-btn {
+        width: 100%;
+      }
+    }
+
+    &__actions {
+      gap: 8px;
+      padding: 12px;
+      
+      .ant-btn {
+        height: 38px;
+        padding: 0 14px;
+        font-size: 13px;
+        flex: 1 1 calc(33.33% - 8px);
+        min-width: 110px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .compra-module {
+    &__inner-tabs {
+      flex-wrap: wrap;
+    }
+
+    &__inner-tab {
+      padding: 8px 16px;
+      font-size: 12px;
+      flex: 1;
+      min-width: 100px;
+    }
+
+    &__header-fields {
+      flex-direction: column;
+      
+      .compra-module__field-group--header {
+        width: 100%;
+        min-width: auto;
+      }
+
+      .compra-module__header-input {
+        width: 100% !important;
+      }
+    }
+
+    &__header-dian {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__dian-row {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    &__dian-input {
+      width: 100% !important;
+      margin-top: 4px;
+    }
+
+    &__section-body {
+      padding: 10px;
+    }
+
+    &__field-group {
+      label {
+        font-size: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &__actions {
+      gap: 8px;
+      padding: 12px;
+      
+      .ant-btn {
+        height: 40px;
+        padding: 0 12px;
+        font-size: 12px;
+        flex: 1 1 calc(50% - 8px);
+        min-width: 90px;
+        border-radius: 8px;
+        
+        .anticon {
+          font-size: 16px;
+        }
+        
+        // Mostrar texto siempre
+        span {
+          display: inline !important;
+        }
+      }
+    }
+
+    &__client-actions {
+      gap: 8px;
+      
+      .compra-module__client-btn {
+        font-size: 12px !important;
+        padding: 0 12px !important;
+        height: 40px !important;
+      }
+    }
+
+    &__sidebar {
+      .compra-module__stats {
+        flex-direction: column;
+        
+        .compra-module__stat {
+          padding: 8px;
+        }
+      }
+
+      .compra-module__stat-label {
+        font-size: 11px;
+      }
+
+      .compra-module__stat-value {
+        font-size: 16px;
+      }
+    }
+
+    // Adicionales responsivo
+    &__adicionales-body {
+      padding: 10px;
+      
+      .ant-row {
+        .ant-col {
+          flex: 0 0 100% !important;
+          max-width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+// ==================== ANIMACIONES ====================
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

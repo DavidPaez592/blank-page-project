@@ -1,0 +1,185 @@
+/* Currencies Form Drawer Styles */
+.currencies-form-drawer {
+  .ant-drawer-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 16px 24px;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .drawer-header {
+    .ant-typography {
+      margin-bottom: 4px;
+    }
+  }
+
+  .drawer-content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    position: relative;
+
+    .currency-form {
+      height: 100%;
+
+      .form-section {
+        margin-bottom: 24px;
+
+        .section-title {
+          color: #1f2937;
+          margin-bottom: 16px !important;
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+
+      .ant-form-item {
+        margin-bottom: 20px;
+
+        .ant-form-item-label {
+          padding-bottom: 4px;
+
+          label {
+            font-weight: 500;
+            color: #374151;
+            font-size: 14px;
+
+            &.ant-form-item-required::before {
+              color: #ef4444;
+            }
+          }
+        }
+
+        .ant-form-item-control {
+          .ant-input,
+          .ant-input-affix-wrapper,
+          .ant-switch {
+            border-radius: 8px;
+          }
+
+          .ant-input:focus,
+          .ant-input-affix-wrapper:focus,
+          .ant-input-affix-wrapper-focused {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+          }
+
+          .ant-form-item-explain-error {
+            font-size: 12px;
+            margin-top: 4px;
+          }
+        }
+
+        .ant-form-item-extra {
+          font-size: 12px;
+          color: #6b7280;
+          margin-top: 4px;
+        }
+      }
+
+      .ant-space-compact {
+        .ant-form-item {
+          margin-bottom: 20px;
+
+          &:first-child {
+            margin-right: 8px;
+          }
+        }
+      }
+
+      .ant-switch {
+        &.ant-switch-checked {
+          background-color: #10b981;
+        }
+      }
+
+      .ant-divider {
+        margin: 32px 0;
+        border-color: #e5e7eb;
+      }
+    }
+
+    .drawer-actions {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      z-index: 10;
+
+      .submit-button {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .ant-float-btn-icon {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+/* Loading states */
+.currencies-form-drawer .ant-spin-nested-loading {
+  height: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .currencies-form-drawer {
+    .ant-drawer-content-wrapper {
+      width: 100% !important;
+    }
+
+    .drawer-content {
+      padding: 16px;
+
+      .drawer-actions {
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+  }
+}
+
+/* Focus states for accessibility */
+.currencies-form-drawer {
+  .ant-input:focus-visible,
+  .ant-switch:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+}
+
+/* Error states */
+.currencies-form-drawer {
+  .ant-form-item-has-error {
+    .ant-input,
+    .ant-input-affix-wrapper {
+      border-color: #ef4444;
+
+      &:focus,
+      &:focus-within {
+        border-color: #ef4444;
+        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1);
+      }
+    }
+  }
+}
+
+/* Success states */
+.currencies-form-drawer {
+  .ant-form-item-has-success {
+    .ant-input,
+    .ant-input-affix-wrapper {
+      border-color: #10b981;
+    }
+  }
+}

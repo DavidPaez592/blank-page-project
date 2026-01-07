@@ -1,0 +1,78 @@
+@use '../../styles/vars.scss' as *;
+
+.module-header {
+  background: var(--module-light);
+  border: 1px solid var(--module-primary);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 16px;
+
+  &__top {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+
+    &-icon {
+      align-items: center;
+      background: var(--module-primary);
+      border-radius: 8px;
+      color: white;
+      display: flex;
+      font-size: 20px;
+      height: 40px;
+      justify-content: center;
+      width: 40px;
+    }
+
+    &-title {
+      color: var(--module-dark);
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  &__fields {
+    margin-bottom: 12px;
+  }
+
+  &__checkboxes {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    .ant-checkbox-wrapper {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
+
+// Media queries para responsividad
+@media (max-width: 768px) {
+  .module-header {
+    padding: 12px;
+
+    &__top {
+      gap: 12px;
+
+      &-icon {
+        font-size: 18px;
+        height: 36px;
+        width: 36px;
+      }
+
+      &-title {
+        font-size: 16px;
+      }
+    }
+
+    &__checkboxes {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}

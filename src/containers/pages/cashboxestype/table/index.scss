@@ -1,0 +1,30 @@
+/* Custom styles for aligning antd Table pagination bar */
+.offices-table-wrapper {
+  .ant-table-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 16px;
+  }
+  .ant-pagination-total-text {
+    order: 1;
+    flex: 1;
+    text-align: left;
+    font-weight: 500;
+  }
+  .ant-pagination {
+    order: 2;
+    flex: 1;
+    justify-content: center;
+  }
+  .ant-pagination-options {
+    order: 3;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .ant-select {
+    min-width: 120px;
+  }
+}

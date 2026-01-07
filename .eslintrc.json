@@ -1,0 +1,243 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    // "plugin:react-hooks/recommended",
+    "standard-with-typescript",
+    "standard-jsx",
+    "plugin:jsx-a11y/recommended",
+    // "plugin:promise/recommended",
+    // "plugin:typescript-sort-keys/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:jsdoc/recommended-typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "react-refresh",
+    "react-hooks",
+    "@typescript-eslint",
+    "jsx-a11y",
+    "import",
+    "promise",
+    "sort-keys-fix",
+    "testing-library",
+    "jest",
+    "sort-destructure-keys",
+    "typescript-sort-keys",
+    "sonarjs",
+    "filename-rules",
+    "jsdoc",
+    "eslint-plugin-tsdoc"
+  ],
+  "root": true,
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": ["tsconfig.json"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "indent": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/prefer-as-const": "warn",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "{}": false,
+          "Function": false
+        },
+        "extendDefaults": true
+      }
+    ],
+    "@typescript-eslint/await-thenable": "off",
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "@typescript-eslint/naming-convention": [
+      "warn",
+      {
+        "selector": "default",
+        "format": ["camelCase"],
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "variable",
+        "format": ["PascalCase", "camelCase", "UPPER_CASE"],
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "parameter",
+        "format": ["camelCase"],
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "parameter",
+        "format": ["PascalCase"],
+        "leadingUnderscore": "allow",
+        "filter": {
+          "regex": "Component$",
+          "match": true
+        }
+      },
+      {
+        "selector": "property",
+        "format": null,
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "enumMember",
+        "format": ["UPPER_CASE"]
+      }
+    ],
+    "@typescript-eslint/comma-dangle": ["off"],
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "none", // 'none' or 'semi' or 'comma'
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi", // 'semi' or 'comma'
+          "requireLast": false
+        }
+      }
+    ],
+    "@typescript-eslint/space-before-function-paren": ["off", {}],
+    "typescript-sort-keys/interface": "error",
+    "typescript-sort-keys/string-enum": "error",
+    "import/default": "error",
+    "import/export": "error",
+    "import/named": "error",
+    "import/no-anonymous-default-export": "error",
+    "import/no-duplicates": "error",
+    "import/no-named-as-default": "error",
+    "import/no-named-as-default-member": "error",
+    "import/no-unresolved": "error",
+    "import/no-default-export": "off",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": true,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": true
+      }
+    ],
+    "sort-keys-fix/sort-keys-fix": "error",
+    "sort-destructure-keys/sort-destructure-keys": [
+      2,
+      {
+        "caseSensitive": false
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "no-alert": "error",
+    "no-console": "error",
+    "no-dupe-keys": "error",
+    "no-debugger": "error",
+    "no-unused-private-class-members": "error",
+    "no-warning-comments": [
+      "warn",
+      {
+        "terms": ["todo", "fixme"]
+      }
+    ],
+    "multiline-ternary": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-no-leaked-render": [
+      "error",
+      {
+        "validStrategies": ["ternary"]
+      }
+    ],
+    "react/jsx-no-bind": "error",
+    "react/no-unstable-nested-components": [
+      "error",
+      {
+        "allowAsProps": true
+      }
+    ],
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "ignoreCase": true,
+        "callbacksLast": true
+      }
+    ],
+    "react/function-component-definition": [
+      "warn",
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/no-multi-comp": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-refresh/only-export-components": "warn",
+    "filename-rules/match": [
+      2,
+      {
+        ".ts": "camelcase",
+        ".tsx": ["camelcase", "pascalcase"]
+      }
+    ],
+    "tsdoc/syntax": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+/* Exchange Rates Page Styles */
+.exchange-rates-container {
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: 100vh;
+
+  .exchange-rates-header {
+    margin-bottom: 24px;
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      padding: 24px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      .title-section {
+        .page-title {
+          margin: 0 0 8px 0;
+          color: #1f2937;
+        }
+
+        .page-description {
+          font-size: 14px;
+          color: #6b7280;
+        }
+      }
+
+      .actions-section {
+        .ant-btn {
+          border-radius: 6px;
+        }
+      }
+    }
+
+    .statistics-row {
+      .ant-card {
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        .ant-statistic-title {
+          color: #6b7280;
+          font-weight: 500;
+        }
+
+        .ant-statistic-content {
+          .ant-statistic-content-value {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .exchange-rates-content {
+    .ant-card {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .exchange-rates-container {
+    padding: 16px;
+
+    .exchange-rates-header {
+      .header-content {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+
+        .actions-section {
+          .ant-space {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .exchange-rates-container {
+    padding: 12px;
+
+    .exchange-rates-header {
+      .header-content {
+        padding: 16px;
+      }
+
+      .statistics-row {
+        .ant-col {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}

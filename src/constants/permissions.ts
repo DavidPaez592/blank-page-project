@@ -1,0 +1,72 @@
+export const PERMISSIONS_LIST = {
+  CurrenciesCreate: 'currencies:create',
+  CurrenciesDelete: 'currencies:delete',
+  CurrenciesDetail: 'currencies:detail',
+  CurrenciesList: 'currencies:list',
+  CurrenciesUpdate: 'currencies:update',
+
+  ExchangeRatesCreate: 'exchange-rates:create',
+  ExchangeRatesDelete: 'exchange-rates:delete',
+  ExchangeRatesDetail: 'exchange-rates:detail',
+  ExchangeRatesList: 'exchange-rates:list',
+  ExchangeRatesUpdate: 'exchange-rates:update',
+  ExchangeRatesBulkUpload: 'exchange-rates:bulkUpload',
+
+  LocationsCreate: 'locations:create',
+  LocationsDelete: 'locations:delete',
+  LocationsDetail: 'locations:detail',
+  LocationsList: 'locations:list',
+  LocationsUpdate: 'locations:update',
+
+  MenuItemCreate: 'menuItem:create',
+  MenuItemDelete: 'menuItems:delete',
+  MenuItemDetail: 'menuItem:detail',
+  MenuItemList: 'menuItem:list',
+  MenuItemUpdate: 'menuItem:update',
+
+  PaymentMethodsCreate: 'payment-methods:create',
+  PaymentMethodsDelete: 'payment-methods:delete',
+  PaymentMethodsDetail: 'payment-methods:detail',
+  PaymentMethodsList: 'payment-methods:list',
+  PaymentMethodsUpdate: 'payment-methods:update',
+
+  PermissionCreate: 'permission:create',
+  PermissionDelete: 'permission:delete',
+  PermissionList: 'permission:list',
+  PermissionUpdate: 'permission:update',
+
+  RolesAssignPermissions: 'roles:assignPermissions',
+  RolesCreate: 'roles:create',
+  RolesDefault: 'roles:setDefault',
+  RolesDelete: 'roles:delete',
+  RolesDetail: 'roles:detail',
+  RolesGetAll: 'roles:getAll',
+  RolesList: 'roles:list',
+  RolesUpdate: 'roles:update',
+
+  RouteCreate: 'routes:create',
+  RouteDelete: 'routes:delete',
+  RouteDetail: 'routes:detail',
+  RouteList: 'routes:list',
+  RouteUpdate: 'routes:update',
+
+  TenantsCreate: 'tenants:create',
+  TenantsDelete: 'tenants:delete',
+  TenantsDetail: 'tenants:detail',
+  TenantsList: 'tenants:list',
+  TenantsUpdate: 'tenants:update',
+
+  UsersAssignPermissions: 'users:assignPermissions',
+  UsersAssignTenant: 'users:assignTenant',
+  UsersCreate: 'users:create',
+  UsersDelete: 'users:delete',
+  UsersDetail: 'users:detail',
+  UsersGetAll: 'users:getAll',
+  UsersList: 'users:list',
+  UsersUpdate: 'users:update',
+
+  // User Office-Users Management (for future use)
+  UserOfficeUsersAdd: 'users:office-users:add',
+  UserOfficeUsersRemove: 'users:office-users:remove',
+  UserOfficeUsersList: 'users:office-users:list',
+}

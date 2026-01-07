@@ -1,0 +1,8 @@
+@use '/src/styles/vars' as *;
+
+.tenants-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+}

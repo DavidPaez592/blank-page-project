@@ -1,0 +1,12 @@
+@use '/src/styles/vars' as *;
+
+.menu-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+
+  .ant-switch-inner {
+    width: 200px !important;
+  }
+}

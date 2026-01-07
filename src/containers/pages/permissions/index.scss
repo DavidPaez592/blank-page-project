@@ -1,0 +1,23 @@
+@use '/src/styles/vars' as *;
+
+.permissions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+
+  .permissions-type-selector {
+    text-align: center;
+    width: 100%;
+
+    @media screen and (min-width: 769px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $gap;
+    }
+  }
+
+  .ant-switch-inner {
+    width: 200px !important;
+  }
+}

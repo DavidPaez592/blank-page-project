@@ -1,0 +1,96 @@
+.tenant-selector__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #001529;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tenant-selector__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.tenant-selector__title {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.tenant-selector__subtitle {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.tenant-selector__grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.tenant-selector__card {
+  width: 260px;
+  height: 220px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  &:hover {
+    box-shadow: 0 8px 24px rgba(22, 119, 255, 0.18);
+    transform: translateY(-4px) scale(1.04);
+    background: #f0f5ff;
+  }
+}
+
+.tenant-selector__card-content {
+  padding: 1rem;
+  width: 100%;
+}
+
+.tenant-selector__logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.tenant-selector__name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #001529;
+  margin-bottom: 0.5rem;
+}
+
+.tenant-selector__uid {
+  font-size: 1rem;
+  color: #888;
+}
+
+.tenant-selector__uid-value {
+  color: #1677ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,54 @@
+@use '/src/styles/vars' as *;
+
+.profile-page {
+  display: grid;
+  margin: 0 auto;
+  gap: $gap;
+
+  h1 {
+    margin: 0;
+
+    text-align: center;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    justify-self: center;
+    display: block;
+
+    @media screen and (min-width: 769px) {
+      align-self: normal;
+    }
+  }
+
+  .full-name {
+    grid-row: 1;
+  }
+
+  .user-details {
+    display: grid;
+    gap: $gap;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: min-content auto;
+    }
+
+    @media screen and (min-width: 769px) {
+      grid-template-columns: repeat(2, 1fr);
+
+      span:nth-child(odd) {
+        text-align: right;
+      }
+    }
+  }
+}

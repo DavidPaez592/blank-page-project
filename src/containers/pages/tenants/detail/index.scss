@@ -1,0 +1,444 @@
+@use '/src/styles/vars' as *;
+
+.tenant-detail {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+  height: 100%;
+  padding: 0 16px;
+
+  &__header {
+    padding: 0;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__back-btn {
+    padding: 4px 8px;
+    color: #1890ff;
+
+    &:hover {
+      background-color: rgba(24, 144, 255, 0.06);
+    }
+  }
+
+  &__separator {
+    color: #d9d9d9;
+  }
+
+  &__current {
+    color: #8c8c8c;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &__left {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__avatar {
+    display: flex;
+    justify-content: center;
+
+    .ant-avatar {
+      background-color: #8c8c8c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px !important;
+      height: 80px !important;
+      font-size: 32px;
+    }
+  }
+
+  &__right {
+    flex: 1;
+  }
+
+  &__info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__title-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  &__name-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #262626;
+    text-align: center;
+    word-break: break-word;
+    line-height: 1.2;
+  }
+
+  &__status-tag {
+    margin: 0;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  &__status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    .ant-tag {
+      margin: 0;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+    }
+
+    .ant-btn {
+      border-radius: 16px;
+      font-size: 12px;
+      height: auto;
+      padding: 4px 12px;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__user-count {
+    font-size: 24px;
+    font-weight: 700;
+    color: #262626;
+    line-height: 1;
+  }
+
+  &__user-label {
+    font-size: 14px;
+    color: #8c8c8c;
+    margin-top: 4px;
+  }
+
+  &__tabs-section {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 0;
+
+    .ant-tabs {
+      margin: 0;
+
+      .ant-tabs-nav {
+        margin-bottom: 16px;
+        justify-content: center;
+        padding: 0 16px;
+
+        .ant-tabs-nav-wrap {
+          justify-content: center;
+        }
+
+        .ant-tabs-tab {
+          padding: 12px 0;
+          margin: 0 16px;
+          font-weight: 500;
+
+          &.ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+              color: #1890ff;
+            }
+          }
+        }
+
+        .ant-tabs-ink-bar {
+          background: #1890ff;
+        }
+      }
+
+      .ant-tabs-content-holder {
+        .ant-tabs-content {
+          .ant-tabs-tabpane {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__tab-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 16px;
+
+    .ant-card-body {
+      padding: 12px;
+    }
+  }
+
+  &__users-section {
+    overflow-x: auto;
+
+    .ant-table {
+      min-width: 600px;
+
+      .ant-table-thead > tr > th {
+        background-color: #fafafa;
+        font-weight: 600;
+        color: #262626;
+        padding: 8px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .ant-table-tbody > tr > td {
+        padding: 8px;
+        font-size: 12px;
+
+        &:nth-child(2) {
+          word-break: break-all;
+          white-space: normal;
+        }
+      }
+
+      .ant-table-body {
+        overflow-x: auto;
+      }
+
+      .ant-space {
+        .ant-space-item {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__roles-section {
+    overflow-x: auto;
+
+    .ant-table {
+      min-width: 500px;
+
+      .ant-table-thead > tr > th {
+        background-color: #fafafa;
+        font-weight: 600;
+        color: #262626;
+        padding: 8px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .ant-table-tbody > tr > td {
+        padding: 8px;
+        font-size: 12px;
+      }
+
+      .ant-table-body {
+        overflow-x: auto;
+      }
+    }
+  }
+
+  &__users-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+    padding: 0;
+  }
+
+  &__add-user-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    height: 40px;
+    border-radius: 6px;
+  }
+
+  &-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 24px;
+
+    &__content {
+      flex-direction: row;
+      gap: 24px;
+      padding: 20px;
+    }
+
+    &__avatar {
+      .ant-avatar {
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 40px;
+      }
+    }
+
+    &__title-section {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &__name-section {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &__name {
+      font-size: 22px;
+      text-align: left;
+    }
+
+    &__status {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &__stats {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &__user-count {
+      font-size: 28px;
+    }
+
+    &__tabs-section {
+      .ant-tabs {
+        .ant-tabs-nav {
+          justify-content: flex-end;
+          padding-right: 24px;
+
+          .ant-tabs-nav-wrap {
+            justify-content: flex-end;
+          }
+
+          .ant-tabs-tab {
+            margin-right: 0;
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+
+    &__tab-card {
+      .ant-card-body {
+        padding: 16px;
+      }
+    }
+
+    &__users-section {
+      .ant-table {
+        .ant-table-thead > tr > th {
+          padding: 12px 16px;
+          font-size: 14px;
+
+          &:first-child {
+            padding-left: 16px;
+          }
+        }
+
+        .ant-table-tbody > tr > td {
+          padding: 12px 16px;
+          font-size: 14px;
+
+          &:first-child {
+            padding-left: 16px;
+          }
+        }
+
+        // Mostrar columna Role en tablet
+        .ant-table-thead > tr > th:nth-child(3),
+        .ant-table-tbody > tr > td:nth-child(3) {
+          display: table-cell;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0;
+
+    &__content {
+      padding: 24px;
+    }
+
+    &__avatar {
+      .ant-avatar {
+        width: 120px !important;
+        height: 120px !important;
+        font-size: 48px;
+      }
+    }
+
+    &__name {
+      font-size: 24px;
+    }
+
+    &__name-section {
+      gap: 16px;
+    }
+
+    &__user-count {
+      font-size: 32px;
+    }
+
+    &__tabs-section {
+      .ant-tabs {
+        .ant-tabs-nav {
+          .ant-tabs-tab {
+            margin-left: 32px;
+          }
+        }
+      }
+    }
+
+    &__users-section {
+      .ant-table {
+        .ant-table-thead > tr > th,
+        .ant-table-tbody > tr > td {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
