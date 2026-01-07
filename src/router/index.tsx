@@ -11,6 +11,7 @@ import { LazyLoad } from '@/components/suspense/LazyLoad'
 import { ROUTER_BASE } from '@/constants'
 import { Dashboard } from '@/containers/layout/App'
 import { NotFoundPage } from '@/containers/pages/notFound'
+import { ErrorBoundary } from '@/containers/views/errorBoundary'
 import { PrivateRoute } from '@/containers/views/privateRouter'
 import { privateRoutes, publicRoutes } from './routes'
 
@@ -49,31 +50,33 @@ export const Router: React.FC = (props: object): JSX.Element => {
   return (
     <BrowserRouter basename={ROUTER_BASE ?? ''}>
       <RedirectHandler />
-      <Suspense fallback={<LazyLoad />}>
-        <Routes>
-          {publicRoutes.map((route) => (
-            <Route
-              Component={route.component}
-              key={route.path}
-              path={route.path}
-            />
-          ))}
+      <ErrorBoundary>
+        <Suspense fallback={<LazyLoad />}>
+          <Routes>
+            {publicRoutes.map((route) => (
+              <Route
+                Component={route.component}
+                key={route.path}
+                path={route.path}
+              />
+            ))}
 
-          <Route element={<PrivateRoute />}>
-            <Route element={<Dashboard {...props} />} path='/'>
-              {privateRoutes.map((route) => (
-                <Route
-                  Component={route.component}
-                  key={route.path}
-                  path={route.path}
-                />
-              ))}
+            <Route element={<PrivateRoute />}>
+              <Route element={<Dashboard {...props} />} path='/'>
+                {privateRoutes.map((route) => (
+                  <Route
+                    Component={route.component}
+                    key={route.path}
+                    path={route.path}
+                  />
+                ))}
+              </Route>
             </Route>
-          </Route>
 
-          <Route path='*' element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
+            <Route path='*' element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
+      </ErrorBoundary>
     </BrowserRouter>
   )
 }
