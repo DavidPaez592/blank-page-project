@@ -5,7 +5,10 @@ import { App } from './App'
 
 import 'antd/dist/reset.css'
 
+console.log('Index.tsx loaded')
+
 const rootElement = document.getElementById('root')
+console.log('Root element:', rootElement)
 
 rootElement
   ? createRoot(rootElement).render(
